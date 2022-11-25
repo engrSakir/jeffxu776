@@ -1532,6 +1532,12 @@
                 verticalAlign: 'middle'
             },
 
+            tooltip: {
+                formatter: function() {
+                    return 'Date: <b>' + this.x + '</b> <br>Value: <b>' + this.y + '</b> <br>Category: <b>'+ this.series.name+'</b>';
+                }
+            },
+
             credits: {
                 enabled: false,
             },
@@ -1540,6 +1546,7 @@
 
             series: [{
                 name: '$/mtu',
+                color: '#FFC238',
                 data: [93.51,
                     94.99,
                     96.58,
