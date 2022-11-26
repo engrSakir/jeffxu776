@@ -10186,12 +10186,16 @@
             },
 
             yAxis: {
+                gridLineWidth: 1,
+                gridLineColor: '#4D4D4D',
                 title: {
                     text: ''
                 }
             },
 
             xAxis: {
+                gridLineWidth: 1,
+                gridLineColor: '#4D4D4D',
                 labels: {
                     rotation: 30
                 },
@@ -11640,7 +11644,20 @@
 
             exporting: { enabled: false },
 
+            plotOptions: {
+                series: {
+                    lineWidth: '1px',
+                    states: {
+                        hover: {
+                            enabled: true,
+                            lineWidth: '1px'
+                        }
+                    }
+                }
+            },
+
             series: [{
+                lineWidth: '2px',
                 name: 'MACD',
                 color: '#FFC238',
                 data: [
@@ -13071,6 +13088,7 @@
 
                 ]
             }, {
+                color: '#DDDDDD',
                 name: 'Signal Line',
                 data: [
                     null,
@@ -14533,12 +14551,16 @@
             },
 
             yAxis: {
+                gridLineWidth: 1,
+                gridLineColor: '#4D4D4D',
                 title: {
                     text: ''
                 }
             },
 
             xAxis: {
+                gridLineWidth: 1,
+                gridLineColor: '#4D4D4D',
                 labels: {
                     rotation: 30
                 },
@@ -15984,7 +16006,20 @@
 
             exporting: { enabled: false },
 
+            plotOptions: {
+                series: {
+                    lineWidth: '1px',
+                    states: {
+                        hover: {
+                            enabled: true,
+                            lineWidth: '1px'
+                        }
+                    }
+                }
+            },
+
             series: [{
+                lineWidth: '2px',
                 name: 'MACD',
                 color: '#FFC238',
                 data: [
