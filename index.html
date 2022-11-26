@@ -112,12 +112,16 @@
             },
 
             yAxis: {
+                gridLineWidth: 1,
+                gridLineColor: '#4D4D4D',
                 title: {
                     text: ''
                 }
             },
 
             xAxis: {
+                gridLineWidth: 1,
+                gridLineColor: '#4D4D4D',
                 labels: {
                     rotation: 30
                 },
@@ -1566,7 +1570,19 @@
 
             exporting: { enabled: false },
 
+            plotOptions: {
+                series: {
+                    lineWidth: '1px',
+                    states: {
+                        hover: {
+                            enabled: true,
+                            lineWidth: '1px'
+                        }
+                    }
+                }
+            },
             series: [{
+                lineWidth: '2px',
                 name: '$/mtu',
                 color: '#FFC238',
                 data: [93.51,
@@ -2995,6 +3011,7 @@
                     280.48
                 ]
             }, {
+                color: '#DDDDDD',
                 name: '12 EMA',
                 data: [null,
                     null,
@@ -4422,6 +4439,7 @@
                     277.83
                 ]
             }, {
+                color: '#DDDDDD',
                 name: '26 EMA',
                 data: [null,
                     null,
@@ -5849,6 +5867,7 @@
                     270.03
                 ]
             }, {
+                color: '#DDDDDD',
                 name: '50 MA',
                 data: [null,
                     null,
@@ -7276,6 +7295,7 @@
                     267.90
                 ]
             }, {
+                color: '#DDDDDD',
                 name: '100 MA',
                 data: [null,
                     null,
@@ -8703,6 +8723,7 @@
                     243.28
                 ]
             }, {
+                color: '#DDDDDD',
                 name: '200 MA',
                 data: [null,
                     null,
