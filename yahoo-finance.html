@@ -48,6 +48,16 @@
     <script>
         Highcharts.getJSON('https://demo-live-data.highcharts.com/aapl-ohlcv.json', function (data) {
             console.log(data);
+            /**
+             * 
+                0:1606487400000
+                1:116.57
+                2:117.49
+                3:116.22
+                4:116.59
+                5:46691300
+            */
+           
             // split the data set into ohlc and volume
             var ohlc = [],
                 volume = [],
