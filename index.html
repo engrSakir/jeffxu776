@@ -11480,7 +11480,17 @@
                     inverted: false,
                     backgroundColor: '#1A1A1A',
                     // zoomType: 'xy',
-                    height: '600px'
+                    height: '600px',
+                    events: {
+                        load: function() {
+                            var chart = this,
+                            series = this.series[0],
+                            xAxis = chart.xAxis[0],
+                            newStart = series.xData[1],
+                            newEnd = series.xData[500];
+                            xAxis.setExtremes(newStart, newEnd);
+                        }
+                    }
                 },
                 stockTools: {
                     gui: {
