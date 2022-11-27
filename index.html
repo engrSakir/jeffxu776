@@ -11513,9 +11513,6 @@
         });
         console.log(MA_200_format_with_date_and_value);
 
-
-
-
         Highcharts.stockChart('container', {
                 yAxis: [{
                     labels: {
@@ -11533,6 +11530,7 @@
                     height: '20%',
                     offset: 0
                 }],
+
                 tooltip: {
                     shape: 'pie',
                     headerShape: 'callout',
@@ -11547,68 +11545,40 @@
                     lineWidth: 2,
                     name: '$/mtu',
                     color: '#FFC238',
-                    // data: [mtu_format_with_date_and_value[0], mtu_format_with_date_and_value[1], mtu_format_with_date_and_value[2], mtu_format_with_date_and_value[4], mtu_format_with_date_and_value[5]]
-                    // data: mtu_format_with_date_and_value
-                    // data: [['2022-01-23', 280.48]]
-                    // data: [['2022-05-05', 159], ['2022-06-05', 654]]
-                    data: (function() {
-                        return mtu.map(function(value, index) {
-                            if(index<1000)
-                            return [dates[index], value];
-                            // return [Date.parse(date), frequencies[i]];
-                        });
-                    })()
-
-
-
+                    data: mtu
                 }, {
+                    color: '#DDDDDD',
+                    name: '12 EMA',
+                    data: MEA_12
+                }, {
+                    color: '#DDDDDD',
+                    name: '26 EMA',
+                    data: MEA_26
+                }, {
+                    color: '#DDDDDD',
+                    name: '50 MA',
+                    data: MA_50
+                }, {
+                    color: '#DDDDDD',
+                    name: '100 MA',
+                    data: MA_100
+                }, {
+                    color: '#DDDDDD',
+                    name: '200 MA',
+                    data: MA_200
+                }, 
+                
+                {
                     type: 'column',
                     id: 'aapl-volume',
                     yAxis: 1,
                     lineWidth: 2,
                     name: 'MACD',
                     color: '#FFC238',
-                    // data: [MACD_format_with_date_and_value]
-                    data: (function() {
-                        return MACD.map(function(value, index) {
-                            if(index<1000)
-                            return [dates[index], value];
-                            // return [Date.parse(date), frequencies[i]];
-                        });
-                    })()
-
+                    data: MACD
                 }, 
                 
-                // {
-                //     color: '#DDDDDD',
-                //     name: '12 EMA',
-                //     // data: [MEA_12_format_with_date_and_value]
-
-
-
-                // }, {
-                //     color: '#DDDDDD',
-                //     name: '26 EMA',
-                //     // data: [MEA_26_format_with_date_and_value]
-
-
-                // }, {
-                //     color: '#DDDDDD',
-                //     name: '50 MA',
-                //     // data: [MA_50_format_with_date_and_value]
-
-                // }, {
-                //     color: '#DDDDDD',
-                //     name: '100 MA',
-                //     data: [MA_100_format_with_date_and_value]
-
-                // }, {
-                //     color: '#DDDDDD',
-                //     name: '200 MA',
-                //     data: [MA_200_format_with_date_and_value]
-
-
-                // }
+               
             ],
 
 
