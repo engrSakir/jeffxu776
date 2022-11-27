@@ -1,53 +1,60 @@
 <html>
-<!-- https://www.highcharts.com/demo/stock/stock-tools-gui -->
+    <!-- https://www.highcharts.com/demo/stock/stock-tools-gui -->
 
-<head>
-    <title>jeffxu776</title>
+    <head>
+        <title>jeffxu776</title>
 
-    <link rel="icon"
-        href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmQPZ7RfdeOFamvmd5VKmLiMGQ8Z0nPSt2CQ&usqp=CAU"
-        type="image/png">
+        <link rel="icon"
+            href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmQPZ7RfdeOFamvmd5VKmLiMGQ8Z0nPSt2CQ&usqp=CAU"
+            type="image/png">
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <!-- Bootstrap CSS -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+            crossorigin="anonymous">
 
-    <link rel="stylesheet" type="text/css" href="https://code.highcharts.com/css/stocktools/gui.css">
-    <link rel="stylesheet" type="text/css" href="https://code.highcharts.com/css/annotations/popup.css">
-    <script src="https://code.highcharts.com/stock/highstock.js"></script>
-    <script src="https://code.highcharts.com/stock/modules/data.js"></script>
-    <script src="https://code.highcharts.com/stock/indicators/indicators-all.js"></script>
-    <script src="https://code.highcharts.com/stock/modules/drag-panes.js"></script>
-    <script src="https://code.highcharts.com/modules/annotations-advanced.js"></script>
-    <script src="https://code.highcharts.com/modules/price-indicator.js"></script>
-    <script src="https://code.highcharts.com/modules/full-screen.js"></script>
-    <script src="https://code.highcharts.com/modules/stock-tools.js"></script>
-    <script src="https://code.highcharts.com/stock/modules/heikinashi.js"></script>
-    <script src="https://code.highcharts.com/stock/modules/hollowcandlestick.js"></script>
-    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
-    
-    <style>
+        <link rel="stylesheet" type="text/css"
+            href="https://code.highcharts.com/css/stocktools/gui.css">
+        <link rel="stylesheet" type="text/css"
+            href="https://code.highcharts.com/css/annotations/popup.css">
+        <script src="https://code.highcharts.com/stock/highstock.js"></script>
+        <script src="https://code.highcharts.com/stock/modules/data.js"></script>
+        <script
+            src="https://code.highcharts.com/stock/indicators/indicators-all.js"></script>
+        <script src="https://code.highcharts.com/stock/modules/drag-panes.js"></script>
+        <script
+            src="https://code.highcharts.com/modules/annotations-advanced.js"></script>
+        <script src="https://code.highcharts.com/modules/price-indicator.js"></script>
+        <script src="https://code.highcharts.com/modules/full-screen.js"></script>
+        <script src="https://code.highcharts.com/modules/stock-tools.js"></script>
+        <script src="https://code.highcharts.com/stock/modules/heikinashi.js"></script>
+        <script
+            src="https://code.highcharts.com/stock/modules/hollowcandlestick.js"></script>
+        <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+        <style>
         #container {
             max-height: 800px;
             min-height: 75vh;
         }
     </style>
-</head>
+    </head>
 
-<body>
-    <div class="container mt-2">
-        <h1 class="text-center">*** Demo for jeffxu776 *** </h1>
-        <div class="card mb-2">
-            <div class="card-header text-center"><a target="_blank"
-                    href="https://finance.yahoo.com/chart/SPY#eyJpbnRlcnZhbCI6IndlZWsiLCJwZXJpb2RpY2l0eSI6MSwiY2FuZGxlV2lkdGgiOjEsImZsaXBwZWQiOmZhbHNlLCJ2b2x1bWVVbmRlcmxheSI6dHJ1ZSwiYWRqIjp0cnVlLCJjcm9zc2hhaXIiOnRydWUsImNoYXJ0VHlwZSI6ImxpbmUiLCJleHRlbmRlZCI6ZmFsc2UsIm1hcmtldFNlc3Npb25zIjp7fSwiYWdncmVnYXRpb25UeXBlIjoib2hsYyIsImNoYXJ0U2NhbGUiOiJsb2ciLCJwYW5lbHMiOnsiY2hhcnQiOnsicGVyY2VudCI6MC44LCJkaXNwbGF5IjoiU1BZIiwiY2hhcnROYW1lIjoiY2hhcnQiLCJpbmRleCI6MCwieUF4aXMiOnsibmFtZSI6ImNoYXJ0IiwicG9zaXRpb24iOm51bGx9LCJ5YXhpc0xIUyI6W10sInlheGlzUkhTIjpbImNoYXJ0Iiwi4oCMdm9sIHVuZHLigIwiXX0sIuKAjG1hY2TigIwgKDEyLDI2LDkpIjp7InBlcmNlbnQiOjAuMiwiZGlzcGxheSI6IuKAjG1hY2TigIwgKDEyLDI2LDkpIiwiY2hhcnROYW1lIjoiY2hhcnQiLCJpbmRleCI6MSwieUF4aXMiOnsibmFtZSI6IuKAjG1hY2TigIwgKDEyLDI2LDkpIiwicG9zaXRpb24iOm51bGx9LCJ5YXhpc0xIUyI6W10sInlheGlzUkhTIjpbIuKAjG1hY2TigIwgKDEyLDI2LDkpIl19fSwic2V0U3BhbiI6bnVsbCwibGluZVdpZHRoIjoyLCJzdHJpcGVkQmFja2dyb3VuZCI6dHJ1ZSwiZXZlbnRzIjp0cnVlLCJjb2xvciI6IiMwMDgxZjIiLCJzdHJpcGVkQmFja2dyb3VkIjp0cnVlLCJyYW5nZSI6bnVsbCwiZXZlbnRNYXAiOnsiY29ycG9yYXRlIjp7ImRpdnMiOnRydWUsInNwbGl0cyI6dHJ1ZX0sInNpZ0RldiI6e319LCJjdXN0b21SYW5nZSI6bnVsbCwic3ltYm9scyI6W3sic3ltYm9sIjoiU1BZIiwic3ltYm9sT2JqZWN0Ijp7InN5bWJvbCI6IlNQWSIsInF1b3RlVHlwZSI6IkVURiIsImV4Y2hhbmdlVGltZVpvbmUiOiJBbWVyaWNhL05ld19Zb3JrIn0sInBlcmlvZGljaXR5IjoxLCJpbnRlcnZhbCI6IndlZWsiLCJzZXRTcGFuIjpudWxsfV0sInN0dWRpZXMiOnsi4oCMdm9sIHVuZHLigIwiOnsidHlwZSI6InZvbCB1bmRyIiwiaW5wdXRzIjp7ImlkIjoi4oCMdm9sIHVuZHLigIwiLCJkaXNwbGF5Ijoi4oCMdm9sIHVuZHLigIwifSwib3V0cHV0cyI6eyJVcCBWb2x1bWUiOiIjMDBiMDYxIiwiRG93biBWb2x1bWUiOiIjZmYzMzNhIn0sInBhbmVsIjoiY2hhcnQiLCJwYXJhbWV0ZXJzIjp7IndpZHRoRmFjdG9yIjowLjQ1LCJjaGFydE5hbWUiOiJjaGFydCIsInBhbmVsTmFtZSI6ImNoYXJ0In19LCLigIxtYWNk4oCMICgxMiwyNiw5KSI6eyJ0eXBlIjoibWFjZCIsImlucHV0cyI6eyJGYXN0IE1BIFBlcmlvZCI6MTIsIlNsb3cgTUEgUGVyaW9kIjoyNiwiU2lnbmFsIFBlcmlvZCI6OSwiaWQiOiLigIxtYWNk4oCMICgxMiwyNiw5KSIsImRpc3BsYXkiOiLigIxtYWNk4oCMICgxMiwyNiw5KSJ9LCJvdXRwdXRzIjp7Ik1BQ0QiOiIjYWQ2ZWZmIiwiU2lnbmFsIjoiI2ZmYTMzZiIsIkluY3JlYXNpbmcgQmFyIjoiIzc5ZjRiZCIsIkRlY3JlYXNpbmcgQmFyIjoiI2ZmODA4NCJ9LCJwYW5lbCI6IuKAjG1hY2TigIwgKDEyLDI2LDkpIiwicGFyYW1ldGVycyI6eyJjaGFydE5hbWUiOiJjaGFydCIsInBhbmVsTmFtZSI6IuKAjG1hY2TigIwgKDEyLDI2LDkpIn19fX0-">Yahoo
-                    Finance Sample</a></div>
-            <div class="card-body">
-                <div id="container" class="chart"></div>
+    <body>
+        <div class="container mt-2">
+            <h1 class="text-center">*** Demo for jeffxu776 *** </h1>
+            <div class="card mb-2">
+                <div class="card-header text-center"><a target="_blank"
+                        href="https://finance.yahoo.com/chart/SPY#eyJpbnRlcnZhbCI6IndlZWsiLCJwZXJpb2RpY2l0eSI6MSwiY2FuZGxlV2lkdGgiOjEsImZsaXBwZWQiOmZhbHNlLCJ2b2x1bWVVbmRlcmxheSI6dHJ1ZSwiYWRqIjp0cnVlLCJjcm9zc2hhaXIiOnRydWUsImNoYXJ0VHlwZSI6ImxpbmUiLCJleHRlbmRlZCI6ZmFsc2UsIm1hcmtldFNlc3Npb25zIjp7fSwiYWdncmVnYXRpb25UeXBlIjoib2hsYyIsImNoYXJ0U2NhbGUiOiJsb2ciLCJwYW5lbHMiOnsiY2hhcnQiOnsicGVyY2VudCI6MC44LCJkaXNwbGF5IjoiU1BZIiwiY2hhcnROYW1lIjoiY2hhcnQiLCJpbmRleCI6MCwieUF4aXMiOnsibmFtZSI6ImNoYXJ0IiwicG9zaXRpb24iOm51bGx9LCJ5YXhpc0xIUyI6W10sInlheGlzUkhTIjpbImNoYXJ0Iiwi4oCMdm9sIHVuZHLigIwiXX0sIuKAjG1hY2TigIwgKDEyLDI2LDkpIjp7InBlcmNlbnQiOjAuMiwiZGlzcGxheSI6IuKAjG1hY2TigIwgKDEyLDI2LDkpIiwiY2hhcnROYW1lIjoiY2hhcnQiLCJpbmRleCI6MSwieUF4aXMiOnsibmFtZSI6IuKAjG1hY2TigIwgKDEyLDI2LDkpIiwicG9zaXRpb24iOm51bGx9LCJ5YXhpc0xIUyI6W10sInlheGlzUkhTIjpbIuKAjG1hY2TigIwgKDEyLDI2LDkpIl19fSwic2V0U3BhbiI6bnVsbCwibGluZVdpZHRoIjoyLCJzdHJpcGVkQmFja2dyb3VuZCI6dHJ1ZSwiZXZlbnRzIjp0cnVlLCJjb2xvciI6IiMwMDgxZjIiLCJzdHJpcGVkQmFja2dyb3VkIjp0cnVlLCJyYW5nZSI6bnVsbCwiZXZlbnRNYXAiOnsiY29ycG9yYXRlIjp7ImRpdnMiOnRydWUsInNwbGl0cyI6dHJ1ZX0sInNpZ0RldiI6e319LCJjdXN0b21SYW5nZSI6bnVsbCwic3ltYm9scyI6W3sic3ltYm9sIjoiU1BZIiwic3ltYm9sT2JqZWN0Ijp7InN5bWJvbCI6IlNQWSIsInF1b3RlVHlwZSI6IkVURiIsImV4Y2hhbmdlVGltZVpvbmUiOiJBbWVyaWNhL05ld19Zb3JrIn0sInBlcmlvZGljaXR5IjoxLCJpbnRlcnZhbCI6IndlZWsiLCJzZXRTcGFuIjpudWxsfV0sInN0dWRpZXMiOnsi4oCMdm9sIHVuZHLigIwiOnsidHlwZSI6InZvbCB1bmRyIiwiaW5wdXRzIjp7ImlkIjoi4oCMdm9sIHVuZHLigIwiLCJkaXNwbGF5Ijoi4oCMdm9sIHVuZHLigIwifSwib3V0cHV0cyI6eyJVcCBWb2x1bWUiOiIjMDBiMDYxIiwiRG93biBWb2x1bWUiOiIjZmYzMzNhIn0sInBhbmVsIjoiY2hhcnQiLCJwYXJhbWV0ZXJzIjp7IndpZHRoRmFjdG9yIjowLjQ1LCJjaGFydE5hbWUiOiJjaGFydCIsInBhbmVsTmFtZSI6ImNoYXJ0In19LCLigIxtYWNk4oCMICgxMiwyNiw5KSI6eyJ0eXBlIjoibWFjZCIsImlucHV0cyI6eyJGYXN0IE1BIFBlcmlvZCI6MTIsIlNsb3cgTUEgUGVyaW9kIjoyNiwiU2lnbmFsIFBlcmlvZCI6OSwiaWQiOiLigIxtYWNk4oCMICgxMiwyNiw5KSIsImRpc3BsYXkiOiLigIxtYWNk4oCMICgxMiwyNiw5KSJ9LCJvdXRwdXRzIjp7Ik1BQ0QiOiIjYWQ2ZWZmIiwiU2lnbmFsIjoiI2ZmYTMzZiIsIkluY3JlYXNpbmcgQmFyIjoiIzc5ZjRiZCIsIkRlY3JlYXNpbmcgQmFyIjoiI2ZmODA4NCJ9LCJwYW5lbCI6IuKAjG1hY2TigIwgKDEyLDI2LDkpIiwicGFyYW1ldGVycyI6eyJjaGFydE5hbWUiOiJjaGFydCIsInBhbmVsTmFtZSI6IuKAjG1hY2TigIwgKDEyLDI2LDkpIn19fX0-">Yahoo
+                        Finance Sample</a></div>
+                <div class="card-body">
+                    <div id="container" class="chart"></div>
+                </div>
             </div>
         </div>
-    </div>
 
-    <script>
+        <script>
 
         let dates = [
             "2005-01-01",
@@ -11466,139 +11473,173 @@
             214.53
         ];
 
-        const  mtu_format_with_date_and_value = [];
-        mtu.forEach((value, index) => {
-            mtu_format_with_date_and_value.push([dates[index], value]);
-        });
-        console.log(mtu_format_with_date_and_value);
-       
-        MACD_format_with_date_and_value = [];
-        MACD.forEach((value, index) => {
-            MACD_format_with_date_and_value.push([dates[index], value]);
-        });
-        console.log(MACD_format_with_date_and_value);
 
-       
-        MEA_12_format_with_date_and_value = [];
-        MEA_12.forEach((value, index) => {
-            MEA_12_format_with_date_and_value.push([dates[index], value]);
-        });
-        console.log(MEA_12_format_with_date_and_value);
-
-       
-        MEA_26_format_with_date_and_value = [];
-        MEA_26.forEach((value, index) => {
-           MEA_26_format_with_date_and_value.push([dates[index], value]);
-        });
-        console.log(MEA_26_format_with_date_and_value);
-
-       
-        MA_50_format_with_date_and_value = [];
-        MA_50.forEach((value, index) => {
-           MA_50_format_with_date_and_value.push([dates[index], value]);
-        });
-        console.log(MA_50_format_with_date_and_value);
-
-       
-        MA_100_format_with_date_and_value = [];
-        MA_100.forEach((value, index) => {
-           MA_100_format_with_date_and_value.push([dates[index], value]);
-        });
-        console.log(MA_100_format_with_date_and_value);
-
-       
-        MA_200_format_with_date_and_value = [];
-        MA_200.forEach((value, index) => {
-           MA_200_format_with_date_and_value.push([dates[index], value]);
-        });
-        console.log(MA_200_format_with_date_and_value);
+        
 
         Highcharts.stockChart('container', {
-                yAxis: [{
-                    labels: {
-                        align: 'left'
-                    },
-                    height: '80%',
-                    resize: {
-                        enabled: true
-                    }
-                }, {
-                    labels: {
-                        align: 'left'
-                    },
-                    top: '80%',
-                    height: '20%',
-                    offset: 0
-                }],
-
-                tooltip: {
-                    shape: 'pie',
-                    headerShape: 'callout',
-                    borderWidth: 0,
-                    shadow: false,
+            yAxis: [{
+                labels: {
+                    align: 'left'
                 },
-
-
-                series: [{
-                    type: 'line',
-                    id: 'aapl-ohlc',
-                    lineWidth: 2,
-                    name: '$/mtu',
-                    color: '#FFC238',
-                    data: mtu
-                }, {
-                    color: '#DDDDDD',
-                    name: '12 EMA',
-                    data: MEA_12
-                }, {
-                    color: '#DDDDDD',
-                    name: '26 EMA',
-                    data: MEA_26
-                }, {
-                    color: '#DDDDDD',
-                    name: '50 MA',
-                    data: MA_50
-                }, {
-                    color: '#DDDDDD',
-                    name: '100 MA',
-                    data: MA_100
-                }, {
-                    color: '#DDDDDD',
-                    name: '200 MA',
-                    data: MA_200
-                }, 
-                
-                {
-                    type: 'column',
-                    id: 'aapl-volume',
-                    yAxis: 1,
-                    lineWidth: 2,
-                    name: 'MACD',
-                    color: '#FFC238',
-                    data: MACD
-                }, 
-                
-               
-            ],
-
-
-                responsive: {
-                    rules: [{
-                        condition: {
-                            maxWidth: 800
-                        },
-                        chartOptions: {
-                            rangeSelector: {
-                                inputEnabled: false
-                            }
-                        }
-                    }]
+                height: '80%',
+                resize: {
+                    enabled: true
                 }
-            });
+            }, {
+                labels: {
+                    align: 'left'
+                },
+                top: '80%',
+                height: '20%',
+                offset: 0
+            }],
+
+            xAxis: {
+                type: 'datetime',
+                // This is from the Highcharts Stock - Stock license required
+                ordinal: true,
+                labels: {
+                // Format the date
+                formatter: function() {
+                    return Highcharts.dateFormat('%Y-%m-%d %H:%M:%S', this.value);
+                }
+                },
+                tickPositioner: function() {
+                return dates.map(function(date) {
+                    return Date.parse(date);
+                });
+                }
+            },
+
+            legend: {
+                layout: 'vertical',
+                align: 'right',
+                verticalAlign: 'middle'
+            },
+
+            tooltip: {
+                formatter: function () {
+                    return 'Date: <b>' + this.x + '</b> <br>Value: <b>' + this.y + '</b> <br>Category: <b>' + this.series.name + '</b>';
+                }
+            },
+
+            credits: {
+                enabled: false,
+            },
+
+            exporting: { enabled: false },
+
+            plotOptions: {
+                series: {
+                    lineWidth: 1,
+                    states: {
+                        hover: {
+                            enabled: true,
+                            lineWidth: 1
+                        }
+                    }
+                }
+            },
+
+            tooltip: {
+                shape: 'pie',
+                headerShape: 'callout',
+                borderWidth: 0,
+                shadow: false,
+            },
+
+
+            series: [{
+                type: 'line',
+                id: 'aapl-ohlc',
+                lineWidth: 2,
+                name: '$/mtu',
+                color: '#FFC238',
+                // data: mtu
+                data: (function() {
+                return dates.map(function(date, i) {
+                    return [Date.parse(date), mtu[i]];
+                });
+                })()
+            }, {
+                color: '#DDDDDD',
+                name: '12 EMA',
+                // data: MEA_12
+                data: (function() {
+                return dates.map(function(date, i) {
+                    return [Date.parse(date), MEA_12[i]];
+                });
+                })()
+            }, {
+                color: '#DDDDDD',
+                name: '26 EMA',
+                // data: MEA_26
+                data: (function() {
+                return dates.map(function(date, i) {
+                    return [Date.parse(date), MEA_26[i]];
+                });
+                })()
+            }, {
+                color: '#DDDDDD',
+                name: '50 MA',
+                // data: MA_50
+                data: (function() {
+                return dates.map(function(date, i) {
+                    return [Date.parse(date), MA_50[i]];
+                });
+                })()
+            }, {
+                color: '#DDDDDD',
+                name: '100 MA',
+                // data: MA_100
+                data: (function() {
+                return dates.map(function(date, i) {
+                    return [Date.parse(date), MA_100[i]];
+                });
+                })()
+            }, {
+                color: '#DDDDDD',
+                name: '200 MA',
+                // data: MA_200
+                data: (function() {
+                return dates.map(function(date, i) {
+                    return [Date.parse(date), MA_200[i]];
+                });
+                })()
+            }, 
+            
+            {
+                type: 'column',
+                id: 'aapl-volume',
+                yAxis: 1,
+                lineWidth: 2,
+                name: 'MACD',
+                color: '#FFC238',
+                // data: MACD
+                data: (function() {
+                return dates.map(function(date, i) {
+                    return [Date.parse(date), MACD[i]];
+                });
+                })()
+            }],
+
+            responsive: {
+                rules: [{
+                    condition: {
+                        maxWidth: 800
+                    },
+                    chartOptions: {
+                        rangeSelector: {
+                            inputEnabled: false
+                        }
+                    }
+                }]
+            }
+        });
       
 
 
     </script>
-</body>
+    </body>
 
 </html>
