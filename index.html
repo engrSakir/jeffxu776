@@ -34,11 +34,11 @@
             src="https://code.highcharts.com/stock/modules/hollowcandlestick.js"></script>
         <script src="https://code.highcharts.com/modules/accessibility.js"></script>
         <style>
-        #container {
-            max-height: 800px;
-            min-height: 75vh;
-        }
-    </style>
+            #container {
+                max-height: 600px;
+                min-height: 600px;
+            }
+        </style>
     </head>
 
     <body>
@@ -11479,7 +11479,8 @@
                     // type: 'spline',
                     // inverted: false,
                     backgroundColor: '#1A1A1A',
-                    // zoomType: 'xy'
+                    // zoomType: 'xy',
+                    height: '600px'
                 },
                 navigation: {
                     bindingsClassName: 'tools-container' // informs Stock Tools where to look for HTML elements for adding technical indicators, annotations etc.
