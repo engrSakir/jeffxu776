@@ -11477,13 +11477,10 @@
             Highcharts.stockChart('container', {
                 chart: {
                     // type: 'spline',
-                    // inverted: false,
+                    inverted: false,
                     backgroundColor: '#1A1A1A',
                     // zoomType: 'xy',
                     height: '600px'
-                },
-                navigation: {
-                    bindingsClassName: 'tools-container' // informs Stock Tools where to look for HTML elements for adding technical indicators, annotations etc.
                 },
                 stockTools: {
                     gui: {
@@ -11494,7 +11491,7 @@
                     labels: {
                         align: 'left'
                     },
-                    height: '80%',
+                    height: '60%',
                     resize: {
                         enabled: true
                     }
@@ -11502,18 +11499,15 @@
                     labels: {
                         align: 'left'
                     },
-                    top: '80%',
-                    height: '20%',
-                    offset: 0
+                    top: '60%',
+                    height: '40%',
+                    offset: 0,
                 }],
 
                 xAxis: {
                     type: 'datetime',
-                    // This is from the Highcharts Stock - Stock license required
                     ordinal: true,
                     labels: {
-                        // enabled: false
-                    // Format the date
                     formatter: function() {
                         return Highcharts.dateFormat('%Y-%m-%d', this.value);
                     }
@@ -11525,41 +11519,17 @@
                     }
                 },
 
-                legend: {
-                    layout: 'vertical',
-                    align: 'right',
-                    verticalAlign: 'middle'
-                },
-
-                tooltip: {
-                    formatter: function () {
-                        return 'Date: <b>' + this.x + '</b> <br>Value: <b>' + this.y + '</b> <br>Category: <b>' + this.series.name + '</b>';
-                    }
-                },
-
                 credits: {
                     enabled: false,
                 },
 
                 exporting: { enabled: false },
 
-                plotOptions: {
-                    series: {
-                        lineWidth: 1,
-                        states: {
-                            hover: {
-                                enabled: true,
-                                lineWidth: 1
-                            }
-                        }
-                    }
-                },
-
                 tooltip: {
                     shape: 'pie',
                     headerShape: 'callout',
-                    borderWidth: 0,
-                    shadow: false,
+                    borderWidth: 2,
+                    shadow: true,
                 },
 
 
@@ -11569,7 +11539,6 @@
                     lineWidth: 2,
                     name: '$/mtu',
                     color: '#FFC238',
-                    // data: mtu
                     data: (function() {
                     return dates.map(function(date, i) {
                         return [Date.parse(date), mtu[i]];
@@ -11578,7 +11547,6 @@
                 }, {
                     color: '#DDDDDD',
                     name: '12 EMA',
-                    // data: MEA_12
                     data: (function() {
                     return dates.map(function(date, i) {
                         return [Date.parse(date), MEA_12[i]];
@@ -11587,7 +11555,6 @@
                 }, {
                     color: '#DDDDDD',
                     name: '26 EMA',
-                    // data: MEA_26
                     data: (function() {
                     return dates.map(function(date, i) {
                         return [Date.parse(date), MEA_26[i]];
@@ -11596,7 +11563,6 @@
                 }, {
                     color: '#DDDDDD',
                     name: '50 MA',
-                    // data: MA_50
                     data: (function() {
                     return dates.map(function(date, i) {
                         return [Date.parse(date), MA_50[i]];
@@ -11605,7 +11571,6 @@
                 }, {
                     color: '#DDDDDD',
                     name: '100 MA',
-                    // data: MA_100
                     data: (function() {
                     return dates.map(function(date, i) {
                         return [Date.parse(date), MA_100[i]];
@@ -11614,7 +11579,6 @@
                 }, {
                     color: '#DDDDDD',
                     name: '200 MA',
-                    // data: MA_200
                     data: (function() {
                     return dates.map(function(date, i) {
                         return [Date.parse(date), MA_200[i]];
@@ -11629,7 +11593,6 @@
                     lineWidth: 2,
                     name: 'MACD',
                     color: '#FFC238',
-                    // data: MACD
                     data: (function() {
                     return dates.map(function(date, i) {
                         return [Date.parse(date), MACD[i]];
@@ -11644,7 +11607,7 @@
                         },
                         chartOptions: {
                             rangeSelector: {
-                                inputEnabled: false
+                                inputEnabled: true
                             }
                         }
                     }]
