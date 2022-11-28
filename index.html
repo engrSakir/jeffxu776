@@ -11498,8 +11498,14 @@
                     }
                 },
                 yAxis: [{
-                    labels: {
-                        align: 'left'
+                    gridLineWidth: 0,
+                    gridLineColor: '#4D4D4D',
+                    labels:
+                    {
+                        align: 'left',
+                        style: {
+                            color: '#DDDDDD '
+                        }
                     },
                     height: '60%',
                     resize: {
@@ -11515,13 +11521,19 @@
                 }],
 
                 xAxis: {
+                    gridLineWidth: 0,
+                    gridLineColor: '#4D4D4D',
+                    labels: {
+                        rotation: 30,
+                        style: {
+                            color: '#DDDDDD '
+                        },
+                        formatter: function() {
+                            return Highcharts.dateFormat('%Y-%M-%d', this.value);
+                        }
+                    },
                     type: 'datetime',
                     ordinal: true,
-                    labels: {
-                    formatter: function() {
-                        return Highcharts.dateFormat('%Y-%M-%d', this.value);
-                    }
-                    },
                     tickPositioner: function() {
                     return dates.map(function(date) {
                         return Date.parse(date);
