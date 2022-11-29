@@ -12915,11 +12915,35 @@
 
                 rangeSelector: {
                     selected: 4,
-                    enabled: false,
+                    enabled: true,
                     allButtonsEnabled: true,
                     buttonTheme: {
                         width: 60
                     },
+                    buttons: [{
+                        type: 'month',
+                        count: 3,
+                        text: '2X',
+                        dataGrouping: {
+                            forced: true,
+                            units: [['day', [1]]]
+                        }
+                    }, {
+                        type: 'year',
+                        count: 1,
+                        text: '1X',
+                        dataGrouping: {
+                            forced: true,
+                            units: [['week', [1]]]
+                        }
+                    }, {
+                        type: 'all',
+                        text: 'All',
+                        dataGrouping: {
+                            forced: true,
+                            units: [['month', [1]]]
+                        }
+                    }],
                 },
 
 				navigator: {
@@ -12941,18 +12965,6 @@
                     gui: {
                         enabled: false // disable the built-in toolbar
                     }
-                },
-
-                legend: {
-                    enabled: true,
-                    align: 'right',
-                    backgroundColor: '#FCFFC5',
-                    borderColor: 'black',
-                    borderWidth: 2,
-                    layout: 'vertical',
-                    verticalAlign: 'top',
-                    y: 100,
-                    shadow: true
                 },
 
                 yAxis: [
