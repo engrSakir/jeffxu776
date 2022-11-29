@@ -12915,7 +12915,7 @@
                             series = this.series[0],
                             xAxis = chart.xAxis[0],
                             newStart = series.xData[1],
-                            newEnd = series.xData[20];
+                            newEnd = series.xData[250];
                             xAxis.setExtremes(newStart, newEnd);
                         }
                     }
@@ -12939,13 +12939,13 @@
                 
                 yAxis: [
                     {
+                        opposite: false,
                         gridLineWidth: 1,
                         gridLineColor: '#4D4D4D',
                         tickInterval: 1,
                         height: '33%',
                         labels:
                         {
-                            align: 'left',
                             style: {
                                 color: '#DDDDDD '
                             }
@@ -12955,7 +12955,8 @@
                         }
                     }, 
                     {
-                        gridLineWidth: 0,
+                        opposite: false,
+                        gridLineWidth: 1,
                         gridLineColor: '#4D4D4D',
                         tickInterval: 1,
                         top: '33%',
@@ -12963,8 +12964,6 @@
                         offset: 0,
                         labels:
                         {
-                            enabled: false,
-                            align: 'left',
                             style: {
                                 color: '#DDDDDD '
                             }
@@ -12975,7 +12974,8 @@
                         
                     },
                     {
-                        gridLineWidth: 0,
+                        opposite: false,
+                        gridLineWidth: 1,
                         gridLineColor: '#4D4D4D',
                         tickInterval: 1,
                         top: '66%',
@@ -12983,8 +12983,6 @@
                         offset: 0,
                         labels:
                         {
-                            enabled: false,
-                            align: 'left',
                             style: {
                                 color: '#DDDDDD '
                             }
