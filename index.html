@@ -12909,20 +12909,23 @@
                     backgroundColor: '#1A1A1A',
                     // zoomType: 'xy',
                     height: '600px',
-                    events: {
-                        load: function() {
-                            var chart = this,
-                            series = this.series[0],
-                            xAxis = chart.xAxis[0],
-                            newStart = series.xData[1],
-                            newEnd = series.xData[250];
-                            xAxis.setExtremes(newStart, newEnd);
-                        }
-                    }
+
                 },
 
                 credits: { enabled: false },
                 exporting: { enabled: false },
+
+                rangeSelector: {
+                    selected: 2,
+                    enabled: true
+                },
+				navigator: {
+					enabled: true //bottom slider
+				},
+
+				scrollbar: {
+					enabled: true
+				},
 
                 tooltip: {
                     shape: 'pie',
