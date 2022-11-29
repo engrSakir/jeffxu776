@@ -11500,6 +11500,7 @@
                 yAxis: [{
                     gridLineWidth: 1,
                     gridLineColor: '#4D4D4D',
+                     tickInterval: 1,
                     labels:
                     {
                         align: 'left',
@@ -11514,6 +11515,7 @@
                 }, {
                     gridLineWidth: 0,
                     gridLineColor: '#4D4D4D',
+                     tickInterval: 1,
                     labels:
                     {
                         enabled: false,
@@ -11540,14 +11542,14 @@
                         },
                         formatter: function() {
                             return Highcharts.dateFormat('%Y-%M-%d', this.value);
-                        }
+                        },
                     },
                     type: 'datetime',
                     ordinal: true,
                     tickPositioner: function() {
-                    return dates.map(function(date) {
-                        return Date.parse(date);
-                    });
+                        return dates.map(function(date) {
+                            return Date.parse(date);
+                        });
                     }
                 },
 
