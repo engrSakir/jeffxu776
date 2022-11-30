@@ -12914,13 +12914,21 @@
                 exporting: { enabled: false },
 
                 rangeSelector: {
-                    selected: 4,
+                    selected: 1,
                     enabled: true,
                     allButtonsEnabled: true,
                     buttonTheme: {
                         width: 60
                     },
                     buttons: [{
+                        type: 'month',
+                        count: 1,
+                        text: '3X',
+                        dataGrouping: {
+                            forced: true,
+                            units: [['day', [1]]]
+                        }
+                    },{
                         type: 'month',
                         count: 3,
                         text: '2X',
